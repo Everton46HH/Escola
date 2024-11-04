@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #meuCanvas{  
+            border: solid 8px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="meuCanvas" style="width: 400;height: 400;"></canvas>
+</body>
+    <script>
+        const canva = document.getElementById("meuCanvas");
+        const contexto =canva.getContext("2d");
+
+        let x = 1;
+        let velocidadeX = 2;
+        let raio = 20;
+        
+        function animar(){
+            
+            contexto.clearRect(0,0,canva.width,canva.height)
+            
+            contexto.beginPath();
+            contexto.arc(x,canva.width/2,raio,0,2* Math.PI);
+            contexto.fill();
+            contexto.stroke();
+            contexto.fillStyle = "black";
+            
+            x += velocidadeX
+
+            if (x>canva.width + raio){
+                x = -raio
+            }
+
+            requestAnimationFrame(animar)
+        }
+        animar();
+    </script>
+</html>

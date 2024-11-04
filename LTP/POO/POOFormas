@@ -1,0 +1,22 @@
+import  math
+
+class Circulo:
+    
+    def __init__(self,raio):
+        self.raio = 0
+        
+    def setRaio(self,raio):
+        self.raio = raio
+        
+    def getArea2D(self):
+        area2D =  self.raio**2 * math.pi
+        return area2D
+    
+    def getArea3D(self):
+        area3D =  self.raio**2 * math.pi * 4
+        return area3D
+
+circulo1 = Circulo(0)
+circulo1.setRaio(10)
+print(circulo1.getArea2D())
+print(circulo1.getArea3D())

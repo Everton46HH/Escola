@@ -1,0 +1,31 @@
+1)Uma classe em programação é um conjunto de Funções e Atributos que podem ser instanciados,de forma que possam originar varios objetos independentes.
+.
+2)Objeto é o instanciamento de uma classe,o objeto pode ser utilizado no POO , uma area da programação que manipula,altera,atualiza,etc valores de um classe instanciada
+
+3)A termo herança na Orientação a objeto,representa a herança de valores que são passadas de uma Classe Mãe para uma Classe Filha,de modo que,a classe filha herde as funcoes e atributos da classe mãe.
+Exemplo:
+
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):
+    def __init__(self,nome):
+        self.nome = nome
+    @abstractmethod
+
+    def andar():
+        pass
+
+class Cachorro(Animal):
+    def init(self,nome):
+        Animal.__init__(self)
+        def andar():
+            return True
+        
+class Peixe(Animal):
+    def init(self,nome):
+        Animal.__init__(self)
+        def andar():
+            return False
+
+4)Uma classe Abstrata é uma Classe Mãe que possui uma função Abstrata,ou seja,uma função vazia. Cada classe filha,originada da classe Mãe Abstrata, preencherá e utilizará de forma diferente a funcao vazia.
