@@ -1,0 +1,65 @@
+*{
+    font-family: "Dancing script";
+}
+
+main{
+    margin: 0 auto;
+    display: flex;
+    width: 65%;
+}
+#Comidas , #Bebidas{
+    background-color: rgba(199, 195, 113, 0.845);
+    width: 100%;
+    padding-top: 1%;
+    border: 1px black solid;
+}
+li{
+    border-bottom: dashed 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h1{
+    font-size: 100%;
+    font-weight: 100;
+    margin: 0;
+}
+ol{
+    width: 80%;
+    margin: 3px auto;
+    padding-left: 0px;
+}
+footer{
+    margin: 0 auto;
+    width: 65%;
+    background-color: rgba(185, 169, 79, 0.733);
+    text-align:right
+}
+input{
+    margin-right: 1%;
+}
+
+@media screen and (min-width:800px) and (max-width:1000px){
+    .global{
+        background-color: red;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "title-1"
+                             "body-1"
+                             "title-2"
+                             "body-2";
+    }
+    .comidas-title{
+        grid-area: title-1;
+    }
+    .bebidas-tile{
+        grid-area: title-2;
+    }
+    .comidas{
+        grid-area: body-1;
+    }
+    .bebidas{
+        grid-area: body-2;
+    }
+}

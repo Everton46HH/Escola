@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        
+        #div-canvas{
             display: flex;
-            justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            justify-content: center;
+            margin: auto 0 ;
         }
-        #meuCanvas{  
-            border: solid 8px;
+        #meuCanvas{
+            border: solid 2px black;
         }
     </style>
 </head>
 <body>
-    <canvas id="meuCanvas" style="width: 400;height: 400;"></canvas>
+    <div id="div-canvas"><canvas id="meuCanvas" style="width: 400;height: 400;"></canvas></div>
 </body>
     <script>
         const canva = document.getElementById("meuCanvas");
         const contexto =canva.getContext("2d");
 
         let x = 1;
-        let velocidadeX = 2;
+        let velocidadeX = 1;
         let raio = 20;
         
         function animar(){
-            
+
             contexto.clearRect(0,0,canva.width,canva.height)
             
             contexto.beginPath();
-            contexto.arc(x,canva.width/2,raio,0,2* Math.PI);
+            contexto.arc(x,canva.height/2,raio,0,2* Math.PI);
             contexto.fill();
             contexto.stroke();
             contexto.fillStyle = "black";
